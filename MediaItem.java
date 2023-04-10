@@ -1,3 +1,5 @@
+package Project;
+
 public class MediaItem {
     private String title;
     private String creator;
