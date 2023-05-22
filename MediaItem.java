@@ -2,15 +2,15 @@ package Project;
 
 public class MediaItem {
     private String title;
-    private String creator;
+    private double rating;
     private String genre;
     private int yearRelease;
 
     MediaItem(){
     }
-    MediaItem(String title, String creator, String genre, int yearRelease){
+    MediaItem(String title, double rating, String genre, int yearRelease){
         this.title = title;
-        this.creator = creator;
+        this.rating = rating;
         this.genre = genre;
         this.yearRelease = yearRelease;
     }
@@ -19,8 +19,8 @@ public class MediaItem {
     String getTitle(){
         return title;
     }
-    String getCreator(){
-        return creator;
+    double getRating(){
+        return rating;
     }
     String getGenre(){
         return genre;
@@ -33,8 +33,8 @@ public class MediaItem {
     void setTitle(String title){
         this.title = title;
     }
-    void setCreator(String creator){
-        this.creator = creator;
+    void setRating(double rating){
+        this.rating = rating;
     }
     void setGenre(String genre){
         this.genre = genre;
@@ -43,4 +43,8 @@ public class MediaItem {
         this.yearRelease = yearRelease;
     }
 
+    @Override
+    public String toString() {
+        return "Title: " + title + ", Genre: " + genre + ", Year: " + yearRelease + ", Rating: " + rating;
+    }
 }
